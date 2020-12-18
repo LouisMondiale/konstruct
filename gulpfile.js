@@ -1,24 +1,18 @@
-/* Подключаем модуль */
-
-const gulp = require('gulp');    //Сам Gulp
-const autoprefixer = require('gulp-autoprefixer');    //Создает префиксы
-const cleanCSS = require('gulp-clean-css');     //Сжимает CSS код
+const gulp = require('gulp');
+const autoprefixer = require('gulp-autoprefixer');
+const cleanCSS = require('gulp-clean-css');
 const del = require('del');      //Удаляет файлы
-const browserSync = require('browser-sync').create();    //Автоматически обновляет браузер при изменениях 
-const sourcemaps = require('gulp-sourcemaps');     //Создает карту кода, чтоб отследить строчку после его сжатия
-const gulpif = require('gulp-if');     //Помогает задать условия
-const gcmq = require('gulp-group-css-media-queries');    //Группирует медиа-запросы
-const less = require('gulp-less');     //Препроцессор LESS
-const smartgrid = require('smart-grid');     //Smart-Grid
-const webp = require('gulp-webp');     //Конвертирует картинки в формат *.webp
-
-/* Создаем флажки для запуска */
+const browserSync = require('browser-sync').create();
+const sourcemaps = require('gulp-sourcemaps');
+const gulpif = require('gulp-if');
+const gcmq = require('gulp-group-css-media-queries');
+const less = require('gulp-less');
+const smartgrid = require('smart-grid');
+const webp = require('gulp-webp');
 
 const isDev = (process.argv.indexOf('--dev') !== -1);
 const isProd = !isDev;
 const isSync = (process.argv.indexOf('--sync') !== -1);
-
-/* Объявляем функции (обработчики) */
 
 function styles() {
    return gulp.src('./src/css/styles.less')
@@ -93,9 +87,7 @@ let build = gulp.series(clean,
    gulp.parallel(styles, img, html, fonts, imgToWebp, js)
 );
 
-/* Запуск задач из консоли */
-
-gulp.task('styles', styles);  //Событие (команда в консоли) и обработчик события, т.е. функция
+gulp.task('styles', styles);
 gulp.task('build', gulp.series(grid, build));
 gulp.task('watch', gulp.series(build, watch));
 gulp.task('grid', grid);
