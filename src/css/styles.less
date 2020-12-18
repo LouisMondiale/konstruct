@@ -14,6 +14,11 @@ body {
    color: @primary;
 }
 
+.devider {
+	height: 1px;
+	background: #e6e6e6;
+}
+
 /* Header */
 
 .header {
@@ -48,5 +53,40 @@ body {
       letter-spacing: 3.7px;
       text-transform: uppercase;
       color: @white;
+   }
+}
+
+/* Navigation */
+
+.navigation {
+   
+   &__inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 0;
+   }
+
+   &__logo {
+      text-align: center;
+   }
+
+   &__item {
+      display: inline-block;
+      margin: 0 15px;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 1px;
+   }
+
+   &__link {
+      color: @primary;
+      text-decoration: none;
+      
+      &:hover {
+         color: @accent;
+      }
    }
 }
