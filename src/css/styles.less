@@ -316,3 +316,121 @@ body {
       padding-left: 16px;
    }
 }
+
+/* Footer */
+
+.footer {
+   background: #141a20;
+   padding-top: 40px;
+   
+   &__inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-bottom: 40px;
+   }
+}
+
+.company {
+   max-width: 250px;
+   color: @white;
+   
+   &__title {
+      font-size: 11px;
+      letter-spacing: 0.85px;
+      text-transform: uppercase;
+   }
+
+   &__logo {
+      margin-top: 19px;
+   }
+
+   &__text {
+      margin-top: 15px;
+      font-size: 11px;
+      line-height: 19px;
+      letter-spacing: 0.85px;
+   }
+}
+
+.links {
+
+   &__title {
+      font-size: 11px;
+      letter-spacing: .85px;
+      text-transform: uppercase;
+      color: @white;
+
+      &_hidden {
+         opacity: 0;
+      }
+   }
+
+   &__list {
+      margin-top: 19px;
+   }
+
+   &__item {
+      font-weight: 600;
+      font-size: 11px;
+      line-height: 25px;
+      letter-spacing: 0.85px;
+      text-transform: uppercase;
+      margin-right: 20px;
+   }
+
+   &__link {
+      color: @white;
+	   text-decoration: none;
+   }
+}
+
+.contact {
+	max-width: 140px;
+   color: @white;
+   
+   &__title {
+      font-size: 11px;
+      letter-spacing: 0.85px;
+      text-transform: uppercase;
+   }
+
+   &__address {
+      font-size: 11px;
+      line-height: 16px;
+      letter-spacing: 0.85px;
+      margin-top: 19px;
+   }
+
+   &__mail,
+   &__phone {
+      color: #fff;
+	   text-decoration: none;
+   }
+}
+
+.social {
+   width: 100px;
+   
+   &__links {
+      margin-top: 9px;
+      display: flex;
+      justify-content: space-around;
+   }
+
+   &__title_hidden {
+      opacity: 0;
+   }
+}
+
+.copyright {
+   background: #171819;
+   
+   &__text {
+      font-size: 11px;
+      letter-spacing: 0.85px;
+      line-height: 60px;
+      text-align: center;
+      color: @white;
+   }
+}
