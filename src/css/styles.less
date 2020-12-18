@@ -255,15 +255,64 @@ body {
       display: block;
       width: 150px;
       height: 40px;
-      background: #00a4e5;
-      color: #fff;
+      background: @accent;
+      color: @white;
       text-transform: uppercase;
       text-align: center;
       font-size: 13px;
-      letter-spacing: .5px;
+      letter-spacing: 0.5px;
       outline: 0;
       cursor: pointer;
       border: none;
       margin: 4% auto 0;
+   }
+}
+
+/* Signup */
+
+.signup {
+   background: #171819;
+   padding: 35px 0;
+   
+   &__inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+   }
+
+   &__title {
+      color: @white;
+      font-weight: 700;
+      font-size: 22px;
+      letter-spacing: 0.85px;
+   }
+
+   &__form {
+      font-size: 14px;
+   }
+
+   &__btn {
+      width: 150px;
+      height: 40px;
+      background: @accent;
+      color: @white;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+      outline: 0;
+      cursor: pointer;
+      border: none;
+      position: relative;
+      bottom: 1px;
+      right: 4px;
+   }
+
+   &__email {
+      width: 250px;
+      height: 40px;
+      border: none;
+      padding-left: 16px;
    }
 }
