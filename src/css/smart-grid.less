@@ -5,33 +5,24 @@
 @break_md: 960px;
 @break_sm: 780px;
 @break_xs: 560px;
-@break_xxs: 320px;
 
 @offset: 20px;
 @offset_lg: @offset;
 @offset_md: @offset;
 @offset_sm: @offset;
 @offset_xs: @offset;
-@offset_xxs: @offset;
 
 @offset_one_side: (@offset / 2);
 @offset_lg_one_side: (@offset_lg / 2);
 @offset_md_one_side: (@offset_md / 2);
 @offset_sm_one_side: (@offset_sm / 2);
 @offset_xs_one_side: (@offset_xs / 2);
-@offset_xxs_one_side: (@offset_xxs / 2);
 
 @fields: 10px;
-@fields_sm: 15px;
 
 .wrapper-full(){
     padding-left: @fields;
     padding-right: @fields;
-
-    .sm-block({
-        padding-left: @fields_sm;
-        padding-right: @fields_sm;
-    });
 }
 
 .row-offsets(){
@@ -108,11 +99,6 @@
 .size-xs(@n){
     @val: ~"calc(100% / @{columns} * @{n} - @{offset_xs})";
     .xs(width, @val);
-}
-
-.size-xxs(@n){
-    @val: ~"calc(100% / @{columns} * @{n} - @{offset_xxs})";
-    .xxs(width, @val);
 }
 
 .shift(@n){
@@ -275,38 +261,6 @@
     .xs(padding-right, @val);
 }
 
-.shift-xxs(@n){
-    @val: ~"calc(100% / @{columns} * @{n} + @{offset_xxs_one_side})";
-    .xxs(margin-left, @val);
-    .xxs(margin-right, @val);
-}
-
-.shift-xxs-left(@n){
-    @val: ~"calc(100% / @{columns} * @{n} + @{offset_xxs_one_side})";
-    .xxs(margin-left, @val);
-}
-
-.shift-xxs-right(@n){
-    @val: ~"calc(100% / @{columns} * @{n} + @{offset_xxs_one_side})";
-    .xxs(margin-right, @val);
-}
-
-.shift-xxs-padding(@n){
-    @val: ~"calc(100% / @{columns} * @{n} + @{offset_xxs_one_side})";
-    .xxs(padding-left, @val);
-    .xxs(padding-right, @val);
-}
-
-.shift-xxs-padding-left(@n){
-    @val: ~"calc(100% / @{columns} * @{n} + @{offset_xxs_one_side})";
-    .xxs(padding-left, @val);
-}
-
-.shift-xxs-padding-right(@n){
-    @val: ~"calc(100% / @{columns} * @{n} + @{offset_xxs_one_side})";
-    .xxs(padding-right, @val);
-}
-
 .lg(@name, @value){
     @media screen and (max-width: @break_lg){
         @{name}: @value;
@@ -351,18 +305,6 @@
 
 .xs-block(@content){
     @media screen and (max-width: @break_xs){
-        @content();
-    }
-}
-
-.xxs(@name, @value){
-    @media screen and (max-width: @break_xxs){
-        @{name}: @value;
-    }
-}
-
-.xxs-block(@content){
-    @media screen and (max-width: @break_xxs){
         @content();
     }
 }

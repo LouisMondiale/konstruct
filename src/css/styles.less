@@ -35,6 +35,7 @@ body {
 
    &__title {
       .bebas();
+      .sm(font-size, 30px);
       font-size: 60px;
       margin-top: 32%;
       letter-spacing: 5.7px;
@@ -68,11 +69,21 @@ body {
       padding: 24px 0;
    }
 
+   &__menu {
+      .xs(margin, 0 auto);
+   }
+
    &__logo {
+      .xs(width, 100%);
       text-align: center;
    }
 
    &__item {
+      .xs-block({
+         display: block;
+         text-align: center;
+         margin-top: 15px;
+      });
       display: inline-block;
       margin: 0 15px;
       text-transform: uppercase;
@@ -122,6 +133,7 @@ body {
    &__founded {
       .col();
       .size(5);
+      .size-sm(10);
       margin-right: auto;
 
    }
@@ -129,6 +141,8 @@ body {
    &__img {
       .col();
       .size(2);
+      .size-sm(4);
+      .size-xs(6);
       align-self: flex-end;
       padding-top: 15px;
       display: block;
@@ -184,6 +198,8 @@ body {
 
    &__text {
       .col();
+      .sm(width, 70%);
+      .sm(margin-top, 20px);
       width: 50%;
       font-size: 11px;
       line-height: 19px;
@@ -192,6 +208,7 @@ body {
 
    &__btn {
       .col();
+      .sm(margin-top, 20px);
       display: block;
       width: 150px;
       height: 40px;
@@ -215,11 +232,14 @@ body {
 .service {
    .col();
    .size(4);
+   .size-md(6);
+   .size-xs(8);
    border: 1px solid #e6e6e6;
 	padding: 32px 29px;
-   margin-top: 20px;
+   margin: @offset_one_side auto;
    
    &__title {
+      .xs(font-size, 13px);
       font-weight: 700;
       line-height: 24px;
       letter-spacing: 0.34px;
@@ -282,6 +302,11 @@ body {
    }
 
    &__title {
+      .sm-block({
+         width: 100%;
+         text-align: center;
+         margin: 20px 0;
+      });
       color: @white;
       font-weight: 700;
       font-size: 22px;
@@ -289,10 +314,19 @@ body {
    }
 
    &__form {
+      .xs(text-align, center);
       font-size: 14px;
    }
 
    &__btn {
+      .sm-block({
+         bottom: 0;
+		   right: 4px;
+      });
+      .xs-block({
+         position: static;
+		   width: 266px;
+      });
       width: 150px;
       height: 40px;
       background: @accent;
@@ -332,6 +366,10 @@ body {
 }
 
 .company {
+   .xs-block({
+      max-width: 100%;
+		margin-bottom: 30px;
+   });
    max-width: 250px;
    color: @white;
    
